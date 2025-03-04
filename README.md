@@ -1,4 +1,4 @@
-# Face Detection,Encoding and Recognition
+# Face Detection,Encoding and Triangulation
 
 ## Face Detection
 
@@ -103,7 +103,13 @@ Both Dlib’s shape_predictor_68_face_landmarks.dat and MediaPipe’s Face Mesh 
 ### Result and Discussions
 
 
-## Face Recognition
+## Face Contour and Triangulation
+
+
+### Result and Discussions
+Triangulation is best used when you need a detailed, structural understanding of a face for applications involving motion, 3D rendering, or where the physical dynamics of the face need to be closely simulated or tracked. This would be applicable in high-end security systems, advanced interactive systems like virtual reality, or detailed character animation in gaming and film.
+
+Contour Detection is more suitable for applications that require basic shape recognition or when you need to segment or identify objects based on their outline. This could be used in automated inspection systems, basic facial recognition tasks, and applications where the focus is on identifying and differentiating objects based on their external boundaries rather than their internal or three-dimensional structure.
 
 
 
