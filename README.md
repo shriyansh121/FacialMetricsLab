@@ -43,7 +43,9 @@ Haar Cascades use a cascade of classifiers, meaning that only regions with a hig
 
 ### Result and Discussions
 
-
+<img width="560" alt="Image" src="https://github.com/user-attachments/assets/d64b5312-90de-499a-9410-58ebcdd0558b" />
+<img width="561" alt="Image" src="https://github.com/user-attachments/assets/7859f936-27ee-4806-95b1-1fc714f6d3be" />
+<img width="581" alt="Image" src="https://github.com/user-attachments/assets/13ac6564-6434-47af-b90b-dc53d3591f0f" />
 
 ## Face Encoding
 
@@ -102,11 +104,24 @@ Both Dlib’s shape_predictor_68_face_landmarks.dat and MediaPipe’s Face Mesh 
 
 ### Result and Discussions
 
-
+<img width="596" alt="Image" src="https://github.com/user-attachments/assets/a6de23cd-3ef0-452e-8451-1cb85ec20f4e" />
+<img width="711" alt="Image" src="https://github.com/user-attachments/assets/c20800a9-e804-4e7a-b7ef-a4ee3fb38fdf" />
+<img width="923" alt="Image" src="https://github.com/user-attachments/assets/517b1fa0-f85f-46bd-b875-6e449dd8d962" />
+<img width="565" alt="Image" src="https://github.com/user-attachments/assets/637f4034-3198-4669-a68a-8ddc96407e82" />
+[](https://github.com/shriyansh121/FacialMetricsLab/blob/7edbd422f1d8e027b3d7f5e7a423798cf3fa344e/results/Face%20Encodings/face_encoing_with_dlib.mov)
 ## Face Contour and Triangulation
 
 
 ### Result and Discussions
+
+<img width="826" alt="Image" src="https://github.com/user-attachments/assets/e2db5770-42ce-4b26-a733-f80a4a196c74" /> 
+
+[Real Time Face Contour](https://github.com/user-attachments/assets/5b846a07-0707-4815-8642-c5ce5cbe8faf)
+
+<img width="584" alt="Image" src="https://github.com/user-attachments/assets/c426d7ed-866a-4f54-8e8c-9fcbc1b0f4b3" />
+<img width="594" alt="Image" src="https://github.com/user-attachments/assets/bf76367a-729c-4910-b761-ff78da34616f" />
+<img width="967" alt="Image" src="https://github.com/user-attachments/assets/63807871-f505-4060-951a-5bf742db42d4" />
+
 Triangulation is best used when you need a detailed, structural understanding of a face for applications involving motion, 3D rendering, or where the physical dynamics of the face need to be closely simulated or tracked. This would be applicable in high-end security systems, advanced interactive systems like virtual reality, or detailed character animation in gaming and film.
 
 Contour Detection is more suitable for applications that require basic shape recognition or when you need to segment or identify objects based on their outline. This could be used in automated inspection systems, basic facial recognition tasks, and applications where the focus is on identifying and differentiating objects based on their external boundaries rather than their internal or three-dimensional structure.
