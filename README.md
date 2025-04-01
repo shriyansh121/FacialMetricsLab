@@ -41,11 +41,40 @@ The detection process begins by sliding a window across the input image at diffe
 
 Haar Cascades use a cascade of classifiers, meaning that only regions with a high likelihood of being faces are processed by more complex classifiers. This hierarchical approach allows the algorithm to discard non-face regions early on, improving efficiency. The result is a bounding box around the detected face. While Haar Cascade is faster and less computationally expensive than more modern methods, it can be less robust in challenging conditions like varying angles, lighting, or occlusions.
 
+### Face Detection using Retinaface
+RetinaFace is a type of face detection technology that uses a method called a convolutional neural network (CNN) to identify faces in images. It starts by adjusting the image size to suit the network while keeping the original shapes of features intact. RetinaFace uses a technique known as Feature Pyramid Network (FPN) which helps it to detect faces of different sizes, from very big to very small, by examining the image at multiple levels or scales.
+
+The model also incorporates additional context to these features, which improves its ability to recognize faces that are partially hidden or smaller than usual. It performs several tasks at once—not only finding where the faces are but also estimating their size, identifying key facial points like the eyes and mouth, and sometimes even guessing gender.
+
+For every face it detects, RetinaFace calculates a confidence score. This score tells how sure the model is that it has found a face. The process involves comparing the detected area with typical face features and deciding how likely it is to be a real face. The model uses a process called non-maximum suppression (NMS) to eliminate any redundant or overlapping detections, keeping only the most likely ones.
+
+This multitasking approach, combined with its ability to handle images at multiple scales and incorporate contextual information, makes RetinaFace highly effective and accurate in detecting faces under a variety of challenging conditions.
+
+### Face Detection using Yunet
+YuNet is a compact and efficient face detection model designed to perform well on resource-constrained devices. The model employs a single-stage convolutional neural network (CNN) architecture, which is optimized for speed and low computational overhead. YuNet processes an input image through a series of convolutional layers, which extract features that are crucial for recognizing facial structures.
+
+The core of YuNet’s efficiency lies in its use of depthwise separable convolutions, which significantly reduce the number of parameters without compromising the accuracy of face detection. This allows YuNet to detect faces quickly, even on devices with limited processing power. The model also incorporates a score regression mechanism to determine the likelihood of each detected area containing a face, enhancing the precision of its predictions.
+
+Finally, YuNet applies a technique called non-maximum suppression (NMS) to refine the detection results. This step eliminates redundant detections and ensures that each face is only counted once, improving both the accuracy and reliability of the final output. Through these methods, YuNet achieves a balance of speed and accuracy, making it suitable for real-time face detection applications.
+
+### Face Detection using MTCNN
+MTCNN, or Multi-task Cascaded Convolutional Networks, is a robust and precise method for face detection that uses a three-stage deep learning framework. Each stage in MTCNN is designed to refine the detection progressively, focusing on different aspects of accuracy and bounding box adjustment.
+
+In the first stage, called P-Net (Proposal Network), the model scans the entire image with a fully convolutional network to quickly propose candidate facial regions. It identifies potential faces and provides bounding box coordinates. It also predicts face probabilities which help in eliminating non-face regions early in the process.
+
+Following P-Net, the second stage involves R-Net (Refinement Network), which takes the outputs from P-Net and refines these proposals. It helps to filter out a large number of false positives, refine the bounding boxes, and again outputs the likelihood of a face along with improved bounding box coordinates.
+
+The final stage, O-Net (Output Network), provides the most refinement. O-Net further reduces false positives, fine-tunes the bounding box coordinates, and additionally provides facial landmarks (like the eyes, nose, and mouth positions). This detailed detection helps in accurately pinpointing facial features and orientations.
+
+Throughout these stages, each network employs a technique called non-maximum suppression (NMS) to reduce overlap between bounding boxes, ensuring that each detected face is unique and clearly identified. This cascading approach allows MTCNN to detect faces with high accuracy and precision, making it effective even in complex visual environments with varying face orientations and scales.
+
 ### Result and Discussions
 
-<img width="560" alt="Image" src="https://github.com/user-attachments/assets/d64b5312-90de-499a-9410-58ebcdd0558b" />
-<img width="561" alt="Image" src="https://github.com/user-attachments/assets/7859f936-27ee-4806-95b1-1fc714f6d3be" />
-<img width="581" alt="Image" src="https://github.com/user-attachments/assets/13ac6564-6434-47af-b90b-dc53d3591f0f" />
+
+
+
+in dlib it cna only detect upto a specific number of images for more images compiled in single image dlib cannot detect it. also dlib in real time is slow. 
+Haarcascade on other hand have a crazy accuracy and works on many faces in single images and also do not lag in real time making it more realiable than dlib.  
 
 ## Face Encoding
 
